@@ -1,9 +1,14 @@
 console.log('task 2');
+
 function calcAverageCalories(days) {
 
-    let totalCalories = 0;
-    const daysArr = Object.keys(days);
-    console.log(daysArr);
+  let averageCalories = 0;
+
+  for (const day of days) {
+    averageCalories += day.calories / days.length;
+  }
+
+  return averageCalories;
 }
 
 console.log(
@@ -33,3 +38,4 @@ console.log(
 console.log(
   calcAverageCalories([])
 ); // 0
+
